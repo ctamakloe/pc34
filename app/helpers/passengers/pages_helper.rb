@@ -1,0 +1,2 @@
+module Passengers::PagesHelper
+end
