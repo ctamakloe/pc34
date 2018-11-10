@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :train_managers
   scope namespace: 'passengers' do
 
   end
