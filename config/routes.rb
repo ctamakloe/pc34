@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope namespace: 'passengers' do
     get 'p/dashboard', to: 'passengers/pages#dashboard'
     get 'p/assistance', to: 'passengers/pages#assistance'
+    get 'p/assistance/success', to: 'passengers/pages#success', as: :p_aid_success
     get 'p/:id/assistance/aid', to: 'passengers/pages#aid', as: :p_aid_request
     get 'p/food', to: 'passengers/pages#food_and_drink'
   end
