@@ -10,28 +10,14 @@
 <%= content_for :body do  %>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 services-section-grid">
-          <!--        <div class="services-section-grid-head">-->
-          <!--          <div class="service-icon">-->
-          <!--                        <span class="fa fa-bandcamp"-->
-          <!--                              aria-hidden="true"></span>-->
-          <!--          </div>-->
-          <!--          <div class="service-icon-heading">-->
-          <!--            <h4> <%#= link_to 'Train Status', '#' %> </h4>-->
-
-          <!--          </div>-->
-          <!--          <div class="clearfix"></div>-->
-          <!--        </div>-->
-        </div>
 
         <div class="col-md-4 services-section-grid">
-
           <div class="services-section-grid-head">
             <div class="service-icon">
               <span class="fa fa-universal-access" aria-hidden="true"></span>
             </div>
             <div class="service-icon-heading">
-              <h4> <%= link_to 'Travel Assistance', assistance_path %> </h4>
+              <h4> <%= link_to 'Travel Assistance', p_assistance_path %> </h4>
             </div>
             <div class="clearfix"></div>
           </div>
@@ -45,15 +31,12 @@
                               aria-hidden="true"></span>
             </div>
             <div class="service-icon-heading">
-              <h4> <%= link_to 'Food & Drink', food_path %> </h4>
+              <h4> <%= link_to 'Food & Drink', p_food_path %> </h4>
             </div>
             <div class="clearfix"></div>
           </div>
         </div>
 
-      </div>
-
-      <div class="row">
         <div class="col-md-4 services-section-grid">
           <div class="services-section-grid-head">
             <div class="service-icon">
@@ -66,21 +49,7 @@
             <div class="clearfix"></div>
           </div>
         </div>
-        <div class="col-md-4 services-section-grid">
-<!--          <div class="services-section-grid-head">-->
-<!--            <div class="service-icon">-->
-<!--              <span class="fa fa-bullhorn" aria-hidden="true"></span>-->
-<!--            </div>-->
-<!--            <div class="service-icon-heading">-->
-<!--              <h4> <%#= link_to 'Contact Staff', '#' %> </h4>-->
-<!--            </div>-->
-<!--            <div class="clearfix"></div>-->
-<!--          </div>-->
-        </div>
-        <div class="col-md-4 services-section-grid">
-        </div>
 
       </div>
     </div>
-
 <% end %>

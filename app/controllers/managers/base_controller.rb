@@ -1,8 +1,13 @@
 class Managers::BaseController < ApplicationController
-  layout 'managers'
+  before_action :authenticate_train_manager!
+
+  # layout 'managers'
+  layout 'passengers'
+
+  helper_method :current_manager
 
 
-  def home
-
+  def current_manager
+    current_train_manager
   end
 end

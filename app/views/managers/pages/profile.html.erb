@@ -1,0 +1,86 @@
+more details on an individual passenger
+
+profile:
+- route details
+- special needs
+
+notifications:
+- what they have requested:
+- ramp at station
+- food from trolley
+- potential abuse in the carriage (hooligans)
+
+<%= content_for :title do %>
+
+  <br>
+
+  <div class="row">
+    <div class="col">
+      <div class="passenger-icon">
+        <span class="fa fa-user" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col"> <%= @passenger.name %> </div>
+  </div>
+
+<% end %>
+
+<%= content_for :body do %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="food-type">
+          <h5 class="text-uppercase">details</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-section">
+      <div class="row">
+        <div class="col-4"> Route:</div>
+        <div class="col-8">
+          <%= @passenger.trips.where(active: true).try(:first).try(:route) %>
+        </div>
+      </div>
+    </div>
+
+    <div class="passenger-info-section">
+      <div class="row">
+        <div class="col-4"> Requirements:</div>
+        <div class="col-8"> - </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-10">
+        <div class="food-type">
+          <h5 class="text-uppercase">requests</h5>
+        </div>
+      </div>
+      <div class="col-2">
+        <%= @passenger.requests.count %>
+      </div>
+    </div>
+
+    <div class="food-section">
+      <div class="services-section-grid-head">
+        <div class="service-icon">
+                        <span class="fa fa-map-signs"
+                              aria-hidden="true"></span>
+        </div>
+        <div class="service-icon-heading">
+          <h4> <%= link_to 'Journey Planner', '#' %> </h4>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+
+  </div>
+<% end %>

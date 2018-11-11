@@ -23,7 +23,9 @@
         <div class="col-md-4 services-section-grid">
           <div class="services-section-grid-head">
             <div class="service-icon-no-heading">
-              <h4> <%= link_to 'Request aid' %> </h4>
+              <h4> <%= link_to 'Request aid',
+                               p_aid_request_path(Passenger.first)
+              %> </h4>
             </div>
             <div class="clearfix"></div>
           </div>

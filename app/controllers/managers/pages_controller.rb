@@ -1,12 +1,10 @@
 class Managers::PagesController < Managers::BaseController
-  before_action :authenticate_train_manager!
-
-  layout 'managers'
-
-  helper_method :current_manager
+  def dashboard
+    @passengers = Passenger.all
+  end
 
 
-  def current_manager
-    current_train_manager
+  def profile
+    @passenger = Passenger.find(params[:id])
   end
 end

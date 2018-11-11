@@ -14,6 +14,13 @@ Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'js
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'js', 'vendor')
 
 
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'colid', 'css')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'colid', 'fonts')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'colid', 'images')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'colid', 'js')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'colid', 'js', 'vendor')
+
+
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

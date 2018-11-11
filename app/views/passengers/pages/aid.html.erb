@@ -1,0 +1,53 @@
+<%= content_for :title do  %>
+  request aid
+<% end %>
+
+<%= content_for :title_message do  %>
+  What do you require help with?
+<% end %>
+
+<%= content_for :body do %>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-8 col-md-8">
+        <form action="">
+          <div class="input-group-icon mt-10">
+            <div class="icon"><i class="fa fa-map-pin"
+                                 aria-hidden="true"></i></div>
+            <div class="form-select">
+              <select style="display: none;">
+                <option value="1">A1</option>
+                <option value="1">A40</option>
+                <option value="1">A8</option>
+                <option value="1">A40</option>
+                <option value="1">A90</option>
+              </select>
+              <div class="nice-select" tabindex="0"><span
+                class="current"></span>
+                <ul class="list">
+                  <li data-value="1" class="option">Question for staff</li>
+                  <li data-value="1" class="option">Food from trolley</li>
+                  <li data-value="1" class="option selected">Help with onward journey</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+                        <textarea class="single-textarea" placeholder="Message"
+                                  onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder = 'Message'"
+                                  required=""></textarea>
+          </div>
+
+          <div class="button-group-area mt-40 pc-button">
+            <a href="#"
+               class="genric-btn primary e-large">Submit</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_10_204714) do
+ActiveRecord::Schema.define(version: 2018_11_11_123034) do
 
   create_table "passengers", force: :cascade do |t|
     t.string "seat_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string "request_type"
+    t.integer "passenger_id"
+    t.text "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["passenger_id"], name: "index_requests_on_passenger_id"
   end
 
   create_table "train_managers", force: :cascade do |t|
@@ -28,6 +38,16 @@ ActiveRecord::Schema.define(version: 2018_11_10_204714) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_train_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_train_managers_on_reset_password_token", unique: true
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "from"
+    t.string "to"
+    t.boolean "active"
+    t.integer "passenger_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["passenger_id"], name: "index_trips_on_passenger_id"
   end
 
 end

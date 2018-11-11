@@ -1,0 +1,36 @@
+<%= content_for :title do %>
+  Passengers
+<% end %>
+
+<%= content_for :body do %>
+  <div class="container">
+    <br>
+
+    <% @passengers.each do |passenger| %>
+      <div class="passenger-section">
+        <div class="row">
+          <div class="col-2 pr-0">
+            <div class="passenger-icon">
+              <span class="fa fa-user" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="col-8 pl-0" style="">
+
+            <div class="service-icon-heading service-icon-heading-extra" style="float:left">
+              <h4> <%= link_to passenger.name, m_profile_path(passenger) %> </h4>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <% if passenger.requests.count > 0 %>
+            <span class="notification"> <%= passenger.requests.count %> </span>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+<% end %>

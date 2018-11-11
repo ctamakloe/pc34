@@ -131,4 +131,66 @@ a, a:hover {
   margin-top:10px;
 }
 
+.passenger-section {
+  color: white;
+  margin-top:15px;
+}
 
+.passenger-section a {
+  color: white;
+}
+
+.menu-icon span {
+  width: 60px;
+  height: 60px;
+  background: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2.4em;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.passenger-icon span {
+  width: 60px;
+  height: 60px;
+  background: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2.4em;
+  color: #67afea;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #fff;
+}
+
+.passenger-icon-heading {
+  float: left;
+  width: 78%;
+  margin-top: 1.1em;
+  padding-left: 20px;
+}
+
+.service-icon-heading-extra{
+  margin-top: 20px;
+margin-left: 15px;
+}
+
+.notification {
+  background: red;
+  color: white;
+  padding:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  top:18px;
+  font-weight: bold;
+}
+
+.passenger-info-section {
+  color: white;
+  padding-top:10px;
+}
