@@ -1,2 +1,3 @@
-class Passenger::BaseController < ApplicationController
+class Passengers::BaseController < ApplicationController
+  layout 'passengers'
 end

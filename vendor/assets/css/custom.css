@@ -1,0 +1,91 @@
+.text-bold {
+    font-weight: bold !important;
+}
+.text-white a {
+    color: white !important;
+}
+
+.service-icon span {
+    width: 60px;
+    height: 60px;
+    background: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2.4em;
+    border: 4px solid #fff;
+    color: #fff;
+    /*border-radius: 50%;*/
+}
+.history-grid:hover .story-img span, .services-section-grid:hover .service-icon span {
+    /*color: #00a8e0;*/
+}
+
+
+.services-section-grid {
+    cursor: pointer;
+    margin-top: 1.3em !important;
+}
+
+.service-icon-heading {
+    float: left;
+    width: 78%;
+    margin-top: 1.1em;
+    padding-left:20px;
+}
+
+.service-icon {
+    float: left;
+    width: 18%;
+    margin-right: 4%;
+}
+
+.services-section-grid-head {
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+.service-icon-no-heading {
+    float: left;
+    padding: 20px;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.pc-button a {
+    width: 100%;
+}
+
+section {
+
+}
+.banner-area {
+    -webkit-background-size: auto;
+    background-size: auto;
+}
+
+a, a:hover {
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 16px;
+}

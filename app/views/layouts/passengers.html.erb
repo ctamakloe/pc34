@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="PlatformC_3_4">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Platform C & 3/4 - The Magical Customer Experience</title>
+
+  <!--
+  CSS
+  ============================================= -->
+  <%= stylesheet_link_tag 'passengers/base',
+                          "https://fonts.googleapis.com/css?family=Poppins:100,400,300,500,600,700"
+  %>
+</head>
+<body class="banner-area">
+<!-- Start Header Area -->
+<header class="default-header">
+  <div class="container">
+    <div class="header-wrap">
+      <div class="header-top d-flex justify-content-between align-items-center">
+
+        <div class="logo">
+        </div>
+
+        <div class="main-menubar d-flex align-items-center">
+          <nav class="hide">
+            <%= link_to 'Home', root_path %>
+            <a href="#">Logout</a>
+          </nav>
+          <div class="menu-bar"><span class="lnr lnr-menu"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="logo">
+        <%= link_to image_tag('logo.png', style: 'padding-bottom:10px;'),
+                    root_path
+        %>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <br>
+  <br>
+  </div>
+</header>
+
+<section class="relative" style="top:110px;">
+  <div class="overlay overlay-bg"></div>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-10">
+        <div class="text-center">
+          <h4 class="text-white text-uppercase">
+            <%= yield :title %>
+
+          </h4>
+          <p class="text-white">
+            <%= yield :title_message %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative pt-100 services-section">
+  <%= yield :body %>
+</section>
+
+<%= javascript_include_tag 'passengers/base',
+                           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+
+%>
+<script>
+    $(document).ready(function () {
+        $(".services-section-grid").on('click', function () {
+            window.location = $(this).find("a").attr("href");
+            return false;
+        });
+    });
+</script>
+
+
+</body>
+</html>
